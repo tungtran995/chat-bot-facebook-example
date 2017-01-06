@@ -45,14 +45,14 @@ app.post('/webhook', function(req, res) {
         else if (message.message.attachments) {
           //bot.sendAttachmentBack(senderId, message.message.attachments[0]);
           if (message.message.attachments[0].payload != null) {
-            var imageUrl = message.message.attachments[0].payload.url;
+            
             sendTextMessage(senderId,'Ko biết..');
           }
         }
       }
       // If user click button
       else if (message.postback) {
-        var payload = message.postback.payload;
+        
         sendTextMessage(senderId,'Ko biết..');
       }
     }
